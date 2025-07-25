@@ -37,30 +37,6 @@ export default function NoticeBoard() {
       setNotices(data)
     } catch (error) {
       console.error("Failed to fetch notices:", error)
-      // Fallback notices for demo
-      setNotices([
-        {
-          _id: "1",
-          title: "Community Health Camp",
-          content: "Free health checkup camp on January 15th at Community Center",
-          date: "2024-01-10",
-          type: "event",
-        },
-        {
-          _id: "2",
-          title: "Education Drive Success",
-          content: "Successfully distributed 500 books to underprivileged children",
-          date: "2024-01-08",
-          type: "announcement",
-        },
-        {
-          _id: "3",
-          title: "Urgent: Flood Relief",
-          content: "Immediate help needed for flood-affected families. Donations welcome.",
-          date: "2024-01-12",
-          type: "urgent",
-        },
-      ])
     } finally {
       setLoading(false)
     }
