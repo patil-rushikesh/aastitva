@@ -11,15 +11,14 @@ export default function FooterSection() {
   })
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/hopefoundation", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com/hopefoundation", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com/hopefoundation", label: "Instagram" },
-    { icon: Linkedin, href: "https://linkedin.com/company/hopefoundation", label: "LinkedIn" },
+    { icon: Facebook, href: "https://facebook.com/socialaastitva", label: "Facebook" },
+    { icon: Twitter, href: "https://twitter.com/socialaastitva", label: "Twitter" },
+    { icon: Instagram, href: "https://instagram.com/socialaastitva", label: "Instagram" },
   ]
 
   return (
     <footer id="contact" className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20" ref={ref}>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-2">
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           {/* Contact Information */}
           <motion.div
@@ -36,11 +35,11 @@ export default function FooterSection() {
                   <div>
                     <p className="font-semibold mb-1">Our Location</p>
                     <p className="text-gray-300 leading-relaxed">
-                      123 Hope Street, Community Center
+                      Akurdi, Pune
                       <br />
-                      City Name, State 123456
+                      Maharashtra 411035
                       <br />
-                      Country
+                      India
                     </p>
                   </div>
                 </div>
@@ -50,7 +49,7 @@ export default function FooterSection() {
                   <div>
                     <p className="font-semibold mb-1">Phone</p>
                     <a href="tel:+1234567890" className="text-gray-300 hover:text-yellow-400 transition-colors">
-                      +1 (234) 567-8900
+                      +91 77200 01488
                     </a>
                   </div>
                 </div>
@@ -60,10 +59,10 @@ export default function FooterSection() {
                   <div>
                     <p className="font-semibold mb-1">Email</p>
                     <a
-                      href="mailto:info@hopefoundation.org"
+                      href="mailto:contact@aastitva.org"
                       className="text-gray-300 hover:text-yellow-400 transition-colors"
                     >
-                      info@hopefoundation.org
+                      contact@aastitva.org
                     </a>
                   </div>
                 </div>
@@ -97,17 +96,17 @@ export default function FooterSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="h-full min-h-[400px]"
           >
-            <h3 className="text-3xl font-bold mb-6 text-yellow-400">Find Us</h3>
+            <h3 className="text-3xl font-bold text-yellow-400">Find Us</h3>
             <div className="bg-gray-700 rounded-2xl overflow-hidden shadow-2xl h-full">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878459418!3d40.74844097932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sus!4v1635959655654!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945.0757018884713!2d73.78039805276129!3d18.650403005850045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9138f6ae57d%3A0xe1e6d8cdc23057f0!2sChetan%20Gautam%20Bendre!5e0!3m2!1sen!2sin!4v1753472624096!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "350px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Hope Foundation Location"
+                title="Aastitva Foundation Location"
               ></iframe>
             </div>
           </motion.div>
@@ -123,26 +122,42 @@ export default function FooterSection() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2">
               <Heart className="w-5 h-5 text-yellow-400" />
-              <p className="text-gray-300">© 2024 Hope Foundation NGO. All rights reserved.</p>
+              <p className="text-gray-300">© 2025 Aastitva Foundation. All rights reserved.</p>
             </div>
 
             <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/privacy" className="hover:text-yellow-400 transition-colors">
+              <a href="#" className="hover:text-yellow-400 transition-colors">
                 Privacy Policy
               </a>
-              <a href="/terms" className="hover:text-yellow-400 transition-colors">
+              <a href="#" className="hover:text-yellow-400 transition-colors">
                 Terms of Service
               </a>
-              <a href="/transparency" className="hover:text-yellow-400 transition-colors">
+              <a href="#" className="hover:text-yellow-400 transition-colors">
                 Transparency Report
               </a>
             </div>
           </div>
 
-          <div className="mt-6 text-center">
+          <div className="mt-6 text-center mb-[-40px]">
             <p className="text-gray-400 text-sm">
-              Hope Foundation is a registered non-profit organization dedicated to creating positive change in
-              communities worldwide.
+              Developed By -{" "}
+              <a
+              href="https://www.linkedin.com/in/rushikesh1503/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-400 underline"
+              >
+              Rushikesh Patil
+              </a>{" "}
+              and{" "}
+              <a
+              href="https://www.linkedin.com/in/mayuresh-rane/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-yellow-400 underline"
+              >
+              Mayuresh Rane
+              </a>
             </p>
           </div>
         </motion.div>
