@@ -35,7 +35,12 @@ export default function Preloader() {
               transition={{ delay: 0.5 }}
               className="text-3xl font-bold text-white mb-2"
             >
-              Hope Foundation
+              <img
+                src="/aastitvaLogo.png"
+                alt="Astitva Logo"
+                className="w-14 h-14 bg-white rounded-full object-contain mx-auto mb-2"
+              />
+              Aastitva Foundation
             </motion.h1>
             <motion.p
               initial={{ y: 20, opacity: 0 }}
@@ -43,7 +48,7 @@ export default function Preloader() {
               transition={{ delay: 0.7 }}
               className="text-white/90"
             >
-              Transforming Lives, Building Communities
+              Empowering Identity, Embracing Existence
             </motion.p>
           </div>
         </motion.div>

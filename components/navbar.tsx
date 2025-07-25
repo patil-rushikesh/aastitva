@@ -42,18 +42,18 @@ export default function Navbar() {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+1 (234) 567-8900</span>
+              <span>+91 77200 01488</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>info@hopefoundation.org</span>
+              <span>contact@aastitva.org</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>123 Hope Street, City Name</span>
+              <span>Pune, Maharashtra</span>
             </div>
           </div>
-          <div className="text-sm font-medium">Transforming Lives Since 2016</div>
+          <div className="text-sm font-medium">Working Since 2017</div>
         </div>
       </div>
 
@@ -78,16 +78,17 @@ export default function Navbar() {
               onClick={() => scrollToSection("#home")}
             >
               <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-lg">
-                  <Heart className="w-7 h-7 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">+</span>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+                  <img
+                    src="/aastitvaLogo.png"
+                    alt="Astitva Logo"
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-gray-800">Hope Foundation</h1>
-                <p className="text-xs text-gray-600 -mt-1">Building Communities</p>
+                <h1 className="text-xl font-bold text-gray-800">Aastitva Foundation</h1>
+                <p className="text-xs text-gray-600 -mt-1">From Identity to Existence</p>
               </div>
             </motion.div>
 
