@@ -44,7 +44,7 @@ export default function ContributeSection() {
             <div className="flex justify-center mb-6">
               <div className="bg-gray-100 p-4 rounded-2xl">
                 <img
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/Qr.png"
                   alt="QR Code for donations"
                   className="w-48 h-48"
                   loading="lazy"
@@ -79,49 +79,44 @@ export default function ContributeSection() {
             </div>
 
             <div className="space-y-4">
-              <div className="bg-gray-50 rounded-xl p-4">
+              {/* <div className="bg-gray-50 rounded-xl p-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold text-gray-700">Account Name:</span>
                   <span className="text-gray-800">Hope Foundation NGO</span>
                 </div>
-              </div>
+              </div> */}
 
               <div className="bg-gray-50 rounded-xl p-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold text-gray-700">Account Number:</span>
-                  <span className="text-gray-800 font-mono">1234567890123456</span>
+                  <span className="text-gray-800 font-mono">1014169776</span>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold text-gray-700">IFSC Code:</span>
-                  <span className="text-gray-800 font-mono">HDFC0001234</span>
+                  <span className="text-gray-800 font-mono">KKBK0001757</span>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-4">
                 <div className="flex justify-between items-center mb-2">
                   <span className="font-semibold text-gray-700">Bank Name:</span>
-                  <span className="text-gray-800">HDFC Bank</span>
+                  <span className="text-gray-800"> Kotak Mahindra Bank</span>
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2">
-                  <span className="font-semibold text-gray-700">Branch:</span>
-                  <span className="text-gray-800">Main Branch, City Center</span>
-                </div>
-              </div>
+              
             </div>
 
             <div className="mt-6 p-4 bg-yellow-50 rounded-xl border border-yellow-200">
               <div className="flex items-center">
-                <Heart className="w-5 h-5 text-yellow-600 mr-2" />
+                {/* <Heart className="w-5 h-5 text-yellow-600 mr-2" /> */}
                 <p className="text-sm text-yellow-800">
                   <strong>Note:</strong> Please send us the transaction details at{" "}
                   <a href="mailto:donations@hopefoundation.org" className="underline">
-                    donations@hopefoundation.org
+                    contact@aastitva.org
                   </a>
                 </p>
               </div>
@@ -133,13 +128,13 @@ export default function ContributeSection() {
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-12 text-center"
+          className="mt-20 text-center"
         >
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-yellow-200 max-w-2xl mx-auto">
-            <Banknote className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
+          <div className="bg-white rounded-2xl p-7 shadow-lg border border-yellow-200 max-w-2xl mx-auto ">
+            <Banknote className="w-12 h-12 text-yellow-500 mx-auto mb-4 " />
             <h3 className="text-xl font-bold text-gray-800 mb-4">Tax Benefits</h3>
             <p className="text-gray-600 leading-relaxed">
-              All donations to Hope Foundation are eligible for tax deduction under Section 80G of the Income Tax Act.
+              All donations to Aastitva Foundation are eligible for tax deduction under Section 80G of the Income Tax Act.
               You will receive a tax-exempt receipt for your contribution.
             </p>
           </div>

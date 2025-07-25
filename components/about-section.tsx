@@ -27,7 +27,7 @@ export default function AboutSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
-            About <span className="text-yellow-500">Hope Foundation</span>
+            About <span className="text-yellow-500">Aastitva Foundation</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Founded with a vision to create lasting change, Hope Foundation has been at the forefront of community

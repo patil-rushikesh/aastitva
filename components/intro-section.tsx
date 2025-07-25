@@ -24,15 +24,14 @@ export default function IntroSection() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center lg:text-left"
         >
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+          <h1 className="text-5xl lg:text-5xl font-bold text-gray-800 mb-6   leading-tight">
             Welcome to{" "}
             <span className="text-yellow-500 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              Hope Foundation
+              Aastitva Foundation
             </span>
           </h1>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            We are dedicated to transforming lives and building stronger communities through education, healthcare, and
-            sustainable development initiatives. Join us in making a lasting impact on society.
+            Aastitva is a non profit organisation based out of Pune, Maharashtra. It took its form in the year 2017. It was formed with the aim of providing a guiding light to those striving to make an identity and to help build a socially conscious tomorrow.
           </p>
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
