@@ -18,20 +18,20 @@ export default function IntroSection() {
       className="min-h-screen bg-gradient-to-br from-yellow-50 to-white flex items-center justify-center px-4 py-10"
     >
      
-      <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={isVisible ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center lg:text-left"
-        >  <p className="text-2xl lg:text-xl font-semibold text-gray-400 mb-2 ml-1 mt-[-70px]"> Reg.No. : MH/1488/2019/Pune</p>
-          <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 mb-6   leading-tight">
+        >  <p className="text-base md:text-lg lg:text-xl font-semibold text-gray-400 mb-2 ml-0 md:ml-1 mt-[-30px] md:mt-[-50px] lg:mt-[-70px]"> Reg.No. : MH/1488/2019/Pune</p>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-4 md:mb-6   leading-tight">
             Welcome to{" "}
             <span className="text-yellow-500 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
               Aastitva Foundation
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-2 leading-relaxed">
+          <p className="text-base md:text-lg lg:text-xl text-gray-600 mb-4 md:mb-2 leading-relaxed">
             Aastitva is a non profit organisation based out of Pune, Maharashtra. It took its form in the year 2017. It was formed with the aim of providing a guiding light to those striving to make an identity and to help build a socially conscious tomorrow.
           </p>
           {/* <motion.button
@@ -47,7 +47,7 @@ export default function IntroSection() {
           initial={{ x: 100, opacity: 0 }}
           animate={isVisible ? { x: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="flex justify-center mt-[-150px]"
+          className="flex justify-center mt-0 md:mt-[-60px] lg:mt-[-150px]"
         >
           <NoticeBoard />
         </motion.div>
