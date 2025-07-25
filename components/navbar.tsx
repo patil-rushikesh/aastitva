@@ -88,7 +88,7 @@ export default function Navbar() {
               </div>
               <div className="hidden sm:block">
                 <h1 className="text-xl font-bold text-gray-800">Aastitva Foundation</h1>
-                <p className="text-xs text-gray-600 -mt-1">From Identity to Existence</p>
+                <p className="text-xs text-gray-600 -mt-1">Empowering Identity, Embracing Existence</p>
               </div>
             </motion.div>
 
