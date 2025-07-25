@@ -12,7 +12,7 @@ export default function MemberSection() {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hi, I'm interested in becoming a member of your NGO!")
-    const whatsappUrl = `https://wa.me/1234567890?text=${message}`
+    const whatsappUrl = `https://wa.me/message/XPEVRULGH7JRP1?src=qr`
     window.open(whatsappUrl, "_blank")
   }
 
@@ -61,10 +61,6 @@ export default function MemberSection() {
                   <ArrowRight className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" />
                   Make a real difference in people's lives
                 </li>
-                <li className="flex items-center">
-                  <ArrowRight className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" />
-                  Access to exclusive events and workshops
-                </li>
               </ul>
             </div>
 
@@ -97,7 +93,7 @@ export default function MemberSection() {
                 onClick={handleWhatsAppClick}
               >
                 <img
-                  src="/placeholder.svg?height=200&width=200"
+                  src="/wp_qr.png"
                   alt="WhatsApp QR Code for membership"
                   className="w-48 h-48"
                   loading="lazy"
@@ -109,7 +105,7 @@ export default function MemberSection() {
               <p className="text-sm text-gray-500 mb-4">Scan with your phone camera or WhatsApp</p>
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <p className="text-green-800 text-sm">
-                  <strong>Pre-filled message:</strong>
+                  <strong>Message on above Whatsapp Account:</strong>
                   <br />
                   "Hi, I'm interested in becoming a member of your NGO!"
                 </p>
