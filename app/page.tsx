@@ -8,23 +8,23 @@ import GallerySection from "@/components/gallery-section"
 import FooterSection from "@/components/footer-section"
 
 export const metadata: Metadata = {
-  title: "Hope Foundation NGO - Transforming Lives, Building Communities",
+  title: "Aastitva Foundation - Empowering Identity, Embracing Existence",
   description:
-    "Join Hope Foundation NGO in our mission to create positive change. We work towards education, healthcare, and community development. Donate, volunteer, or become a member today.",
+    "Join Aastitva Foundation in our mission to create positive change. We work towards education, healthcare, and community development. Donate, volunteer, or become a member today.",
   keywords:
     "NGO, charity, donation, volunteer, community development, education, healthcare, social work, Hope Foundation",
-  authors: [{ name: "Hope Foundation NGO" }],
-  creator: "Hope Foundation NGO",
-  publisher: "Hope Foundation NGO",
+  authors: [{ name: "Aastitva Foundation" }],
+  creator: "Aastitva Foundation",
+  publisher: "Aastitva Foundation",
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://hopefoundation.org",
-    siteName: "Hope Foundation NGO",
-    title: "Hope Foundation NGO - Transforming Lives, Building Communities",
+    url: "https://aastitva.org",
+    siteName: "Aastitva Foundation",
+    title: "Aastitva Foundation - Empowering Identity, Embracing Existence",
     description:
-      "Join Hope Foundation NGO in our mission to create positive change. We work towards education, healthcare, and community development.",
+      "Join Aastitva Foundation in our mission to create positive change. We work towards education, healthcare, and community development.",
     images: [
       {
         url: "/placeholder.svg?height=630&width=1200",
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hope Foundation NGO - Transforming Lives, Building Communities",
+    title: "Aastitva Foundation - Empowering Identity, Embracing Existence",
     description:
-      "Join Hope Foundation NGO in our mission to create positive change. We work towards education, healthcare, and community development.",
+      "Join Aastitva Foundation NGO in our mission to create positive change. We work towards education, healthcare, and community development.",
     images: ["/placeholder.svg?height=630&width=1200"],
   },
   alternates: {
-    canonical: "https://hopefoundation.org",
+    canonical: "https://aastitva.org",
   },
 }
 
