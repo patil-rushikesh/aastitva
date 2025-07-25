@@ -42,15 +42,15 @@ export default function Navbar() {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+1 (234) 567-8900</span>
+              <span>+91 77200 01488</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
-              <span>info@hopefoundation.org</span>
+              <span>contact@aastitva.org</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>123 Hope Street, City Name</span>
+              <span>Panchataranagar, Akrudi, Pune, India, 411035</span>
             </div>
           </div>
           <div className="text-sm font-medium">Transforming Lives Since 2016</div>
