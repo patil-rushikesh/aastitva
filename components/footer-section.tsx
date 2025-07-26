@@ -17,19 +17,19 @@ export default function FooterSection() {
   ]
 
   return (
-    <footer id="contact" className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-20" ref={ref}>
-      <div className="max-w-6xl mx-auto px-2">
-        <div className="grid lg:grid-cols-2 gap-12 mb-12">
+    <footer id="contact" className="bg-gradient-to-br from-gray-900 to-gray-800 text-white py-12 sm:py-20" ref={ref}>
+      <div className="max-w-6xl mx-auto px-2 sm:px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 mb-8 sm:mb-12">
           {/* Contact Information */}
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-bold mb-6 text-yellow-400">Get in Touch</h3>
-              <div className="space-y-4">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-yellow-400">Get in Touch</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex items-start space-x-4">
                   <MapPin className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
                   <div>
@@ -71,8 +71,8 @@ export default function FooterSection() {
 
             {/* Social Media Links */}
             <div>
-              <h4 className="text-xl font-bold mb-4 text-yellow-400">Follow Us</h4>
-              <div className="flex space-x-4">
+              <h4 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4 text-yellow-400">Follow Us</h4>
+              <div className="flex space-x-3 sm:space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -94,15 +94,15 @@ export default function FooterSection() {
             initial={{ x: 100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="h-full min-h-[400px]"
+            className="h-full min-h-[250px] sm:min-h-[400px]"
           >
-            <h3 className="text-3xl font-bold text-yellow-400">Find Us</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold text-yellow-400">Find Us</h3>
             <div className="bg-gray-700 rounded-2xl overflow-hidden shadow-2xl h-full">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d945.0757018884713!2d73.78039805276129!3d18.650403005850045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9138f6ae57d%3A0xe1e6d8cdc23057f0!2sChetan%20Gautam%20Bendre!5e0!3m2!1sen!2sin!4v1753472624096!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: "350px" }}
+                style={{ border: 0, minHeight: "200px", maxHeight: "400px" }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -117,15 +117,15 @@ export default function FooterSection() {
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="border-t border-gray-700 pt-8"
+          className="border-t border-gray-700 pt-6 sm:pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2">
               <Heart className="w-5 h-5 text-yellow-400" />
-              <p className="text-gray-300">© 2025 Aastitva Foundation. All rights reserved.</p>
+              <p className="text-gray-300 text-xs sm:text-sm">© 2025 Aastitva Foundation. All rights reserved.</p>
             </div>
 
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
+            <div className="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm text-gray-400">
               <a href="#" className="hover:text-yellow-400 transition-colors">
                 Privacy Policy
               </a>
@@ -138,8 +138,8 @@ export default function FooterSection() {
             </div>
           </div>
 
-          <div className="mt-6 text-center mb-[-40px]">
-            <p className="text-gray-400 text-sm">
+          <div className="mt-4 sm:mt-6 text-center mb-[-20px] sm:mb-[-40px]">
+            <p className="text-gray-400 text-xs sm:text-sm">
               Developed By -{" "}
               <a
               href="https://www.linkedin.com/in/rushikesh1503/"

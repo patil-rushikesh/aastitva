@@ -37,9 +37,9 @@ export default function Navbar() {
   return (
     <>
       {/* Top Contact Bar */}
-      <div className="bg-yellow-500 text-white py-2 px-4 text-sm hidden md:block">
+      <div className="bg-yellow-500 text-white py-2 px-2 sm:px-4 text-xs sm:text-sm hidden md:block">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-          <div className="flex items-center space-x-6">
+          <div className="flex items-center space-x-4 sm:space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
               <span>+91 77200 01488</span>
@@ -53,7 +53,7 @@ export default function Navbar() {
               <span>Pune, Maharashtra</span>
             </div>
           </div>
-          <div className="text-sm font-medium">Working Since 2017</div>
+          <div className="text-xs sm:text-sm font-medium">Working Since 2017</div>
         </div>
       </div>
 
@@ -69,25 +69,25 @@ export default function Navbar() {
         }`}
         style={{ marginTop: scrolled ? "0" : "40px" }}
       >
-        <div className="max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-2 sm:px-4">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="flex items-center space-x-3 cursor-pointer"
+              className="flex items-center space-x-2 sm:space-x-3 cursor-pointer"
               onClick={() => scrollToSection("#home")}
             >
               <div className="relative">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg">
                   <img
                     src="/aastitvaLogo.png"
                     alt="Astitva Logo"
-                    className="w-14 h-14 object-contain"
+                    className="w-10 h-10 sm:w-14 sm:h-14 object-contain"
                   />
                 </div>
               </div>
               <div className="hidden sm:block">
-                <h1 className="text-xl font-bold text-gray-800">Aastitva Foundation</h1>
+                <h1 className="text-base sm:text-xl font-bold text-gray-800">Aastitva Foundation</h1>
                 <p className="text-xs text-gray-600 -mt-1">Empowering Identity, Embracing Existence</p>
               </div>
             </motion.div>
@@ -141,7 +141,7 @@ export default function Navbar() {
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-white border-t border-gray-200 shadow-lg"
             >
-              <div className="px-4 py-6 space-y-4">
+              <div className="px-2 py-4 sm:px-4 sm:py-6 space-y-3 sm:space-y-4">
                 {navItems.map((item, index) => (
                   <motion.button
                     key={item.name}
@@ -149,7 +149,7 @@ export default function Navbar() {
                     animate={{ x: 0, opacity: 1 }}
                     transition={{ delay: index * 0.1 }}
                     onClick={() => scrollToSection(item.href)}
-                    className="block w-full text-left py-3 px-4 text-gray-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg font-medium transition-all duration-200"
+                    className="block w-full text-left py-2 sm:py-3 px-2 sm:px-4 text-gray-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg font-medium transition-all duration-200"
                   >
                     {item.name}
                   </motion.button>
@@ -159,11 +159,11 @@ export default function Navbar() {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: navItems.length * 0.1 }}
-                  className="pt-4 border-t border-gray-200"
+                  className="pt-3 sm:pt-4 border-t border-gray-200"
                 >
                   <button
                     onClick={() => scrollToSection("#contribute")}
-                    className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-3 px-6 rounded-full font-semibold shadow-lg"
+                    className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full font-semibold shadow-lg"
                   >
                     Donate Now
                   </button>
@@ -174,15 +174,15 @@ export default function Navbar() {
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   transition={{ delay: (navItems.length + 1) * 0.1 }}
-                  className="pt-4 border-t border-gray-200 space-y-3"
+                  className="pt-3 sm:pt-4 border-t border-gray-200 space-y-2 sm:space-y-3"
                 >
-                  <div className="flex items-center space-x-3 text-gray-600">
+                  <div className="flex items-center space-x-2 sm:space-x-3 text-gray-600">
                     <Phone className="w-4 h-4 text-yellow-500" />
-                    <span className="text-sm">+1 (234) 567-8900</span>
+                    <span className="text-xs sm:text-sm">+91 77200 01488</span>
                   </div>
-                  <div className="flex items-center space-x-3 text-gray-600">
+                  <div className="flex items-center space-x-2 sm:space-x-3 text-gray-600">
                     <Mail className="w-4 h-4 text-yellow-500" />
-                    <span className="text-sm">info@hopefoundation.org</span>
+                    <span className="text-xs sm:text-sm">contact@aastitva.org</span>
                   </div>
                 </motion.div>
               </div>

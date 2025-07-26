@@ -18,28 +18,27 @@ export default function MemberSection() {
 
   return (
     <section id="membership" className="py-20 bg-gradient-to-br from-white to-yellow-50" ref={ref}>
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4">
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
             Become a <span className="text-yellow-500">Member</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Join our community of changemakers and be part of the solution. Together, we can create a lasting impact on
             society.
           </p>
         </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <motion.div
             initial={{ x: -100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-yellow-200">
               <Users className="w-12 h-12 text-yellow-500 mb-4" />
@@ -68,18 +67,17 @@ export default function MemberSection() {
               whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}
               whileTap={{ scale: 0.95 }}
               onClick={handleWhatsAppClick}
-              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-3"
+              className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-2xl font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3"
             >
-              <MessageCircle className="w-6 h-6" />
+              <MessageCircle className="w-5 sm:w-6 h-5 sm:h-6" />
               <span>Join via WhatsApp</span>
             </motion.button>
           </motion.div>
-
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white rounded-2xl p-8 shadow-2xl border border-yellow-200"
+            className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-yellow-200"
           >
             <div className="text-center mb-8">
               <QrCode className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -87,15 +85,15 @@ export default function MemberSection() {
               <p className="text-gray-600">Scan to start your membership journey</p>
             </div>
 
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-4 sm:mb-6">
               <div
-                className="bg-gray-100 p-4 rounded-2xl cursor-pointer hover:bg-gray-200 transition-colors duration-300"
+                className="bg-gray-100 p-2 sm:p-4 rounded-2xl cursor-pointer hover:bg-gray-200 transition-colors duration-300"
                 onClick={handleWhatsAppClick}
               >
                 <img
                   src="/wp_qr.png"
                   alt="WhatsApp QR Code for membership"
-                  className="w-48 h-48"
+                  className="w-32 h-32 sm:w-48 sm:h-48"
                   loading="lazy"
                 />
               </div>
@@ -113,12 +111,11 @@ export default function MemberSection() {
             </div>
           </motion.div>
         </div>
-
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="mt-16 grid md:grid-cols-3 gap-8"
+          className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
         >
           <div className="text-center bg-white rounded-2xl p-6 shadow-lg border border-yellow-200">
             <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">

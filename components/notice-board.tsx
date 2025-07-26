@@ -82,15 +82,13 @@ export default function NoticeBoard() {
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
-      className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md mx-auto border border-yellow-200 relative overflow-hidden"
+      className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 w-full max-w-xs sm:max-w-md mx-auto border border-yellow-200 relative overflow-hidden"
     >
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 to-yellow-600"></div>
-
-      <div className="flex items-center mb-4">
-        <Heart className="w-6 h-6 text-yellow-500 mr-2" />
-        <h3 className="text-xl font-bold text-gray-800">Notice Board</h3>
+      <div className="flex items-center mb-3 sm:mb-4">
+        <Heart className="w-5 sm:w-6 h-5 sm:h-6 text-yellow-500 mr-2" />
+        <h3 className="text-lg sm:text-xl font-bold text-gray-800">Notice Board</h3>
       </div>
-
       <AnimatePresence mode="wait">
         {notices.length > 0 && (
           <motion.div
@@ -99,24 +97,23 @@ export default function NoticeBoard() {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="space-y-3"
+            className="space-y-2 sm:space-y-3"
           >
             <div className="flex items-center space-x-2">
               <div className={`p-2 rounded-full ${getTypeColor(notices[currentIndex].type)} text-white`}>
                 {getIcon(notices[currentIndex].type)}
               </div>
               <div className="flex-1">
-                <h4 className="font-semibold text-gray-800 text-sm">{notices[currentIndex].title}</h4>
+                <h4 className="font-semibold text-gray-800 text-xs sm:text-sm">{notices[currentIndex].title}</h4>
                 <p className="text-xs text-gray-500">{new Date(notices[currentIndex].date).toLocaleDateString()}</p>
               </div>
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed">{notices[currentIndex].content}</p>
+            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{notices[currentIndex].content}</p>
           </motion.div>
         )}
       </AnimatePresence>
-
       {notices.length > 1 && (
-        <div className="flex justify-center mt-4 space-x-2">
+        <div className="flex justify-center mt-3 sm:mt-4 space-x-2">
           {notices.map((_, index) => (
             <button
               key={index}

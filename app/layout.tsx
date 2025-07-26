@@ -59,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="canonical" href="https://hopefoundation.org" />
         <meta name="theme-color" content="#EAB308" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
