@@ -94,16 +94,22 @@ export default function AboutSection() {
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="grid grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-6 text-center shadow-lg border border-yellow-200 hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-yellow-200 hover:shadow-xl transition-all duration-300 flex flex-col sm:block"
             >
-              <stat.icon className="w-12 h-12 text-yellow-500 mx-auto mb-4" />
-              <div className="text-3xl font-bold text-gray-800 mb-2">{stat.value}</div>
-              <div className="text-gray-600 font-medium">{stat.label}</div>
+              <div className="flex items-center gap-4 sm:block">
+                <div className="flex items-center justify-center h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-yellow-50">
+                  <stat.icon className="w-5 h-5 sm:w-7 sm:h-7 text-yellow-500" />
+                </div>
+                <div className="text-left sm:text-center">
+                  <div className="text-xl sm:text-3xl font-bold text-gray-800 mb-1 sm:mb-2">{stat.value}</div>
+                  <div className="text-xs sm:text-base text-gray-600 font-medium">{stat.label}</div>
+                </div>
+              </div>
             </div>
           ))}
         </motion.div>

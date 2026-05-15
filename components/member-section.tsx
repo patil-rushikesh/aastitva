@@ -39,10 +39,10 @@ export default function MemberSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="space-y-6 sm:space-y-8"
           >
-            <div className="bg-white rounded-2xl p-6 shadow-lg border border-yellow-200">
-              <Users className="w-12 h-12 text-yellow-500 mb-4" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Why Join Us?</h3>
-              <ul className="space-y-3 text-gray-600">
+            <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-yellow-200 min-w-0">
+              <Users className="w-10 h-10 sm:w-12 sm:h-12 text-yellow-500 mb-3" />
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-3">Why Join Us?</h3>
+              <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-600">
                 <li className="flex items-center">
                   <ArrowRight className="w-5 h-5 text-yellow-500 mr-3 flex-shrink-0" />
                   Be part of meaningful community projects
@@ -76,32 +76,34 @@ export default function MemberSection() {
             initial={{ x: 100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-yellow-200"
+            className="bg-white rounded-2xl p-4 sm:p-8 shadow-2xl border border-yellow-200 min-w-0"
           >
-            <div className="text-center mb-8">
-              <QrCode className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">Quick Join</h3>
-              <p className="text-gray-600">Scan to start your membership journey</p>
+            <div className="text-center mb-5 sm:mb-8">
+              <QrCode className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-3 sm:mb-4" />
+              <h3 className="text-lg sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">Quick Join</h3>
+              <p className="text-sm sm:text-base text-gray-600">Scan to start your membership journey</p>
             </div>
 
             <div className="flex justify-center mb-4 sm:mb-6">
-              <div
-                className="bg-gray-100 p-2 sm:p-4 rounded-2xl cursor-pointer hover:bg-gray-200 transition-colors duration-300"
+              <button
+                type="button"
                 onClick={handleWhatsAppClick}
+                className="bg-gray-100 p-2 sm:p-4 rounded-2xl hover:bg-gray-200 transition-colors duration-300"
+                aria-label="Open WhatsApp to join"
               >
                 <img
                   src="/wp_qr.png"
                   alt="WhatsApp QR Code for membership"
-                  className="w-32 h-32 sm:w-48 sm:h-48"
+                  className="mx-auto block w-28 h-28 sm:w-48 sm:h-48 object-contain"
                   loading="lazy"
                 />
-              </div>
+              </button>
             </div>
 
             <div className="text-center">
-              <p className="text-sm text-gray-500 mb-4">Scan with your phone camera or WhatsApp</p>
-              <div className="bg-green-50 rounded-xl p-4 border border-green-200">
-                <p className="text-green-800 text-sm">
+              <p className="text-xs sm:text-sm text-gray-500 mb-4">Scan with your phone camera or WhatsApp</p>
+              <div className="bg-green-50 rounded-xl p-3 sm:p-4 border border-green-200">
+                <p className="text-xs sm:text-sm text-green-800">
                   <strong>Send this message on WhatsApp:</strong>
                   <br />
                   "Hi, I'm interested in becoming a member of your NGO!"
@@ -116,28 +118,40 @@ export default function MemberSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-10 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8"
         >
-          <div className="text-center bg-white rounded-2xl p-6 shadow-lg border border-yellow-200">
-            <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-yellow-600">1</span>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-yellow-200 min-w-0">
+            <div className="flex items-start gap-4 sm:block sm:text-center">
+              <div className="w-11 h-11 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                <span className="text-base sm:text-2xl font-bold text-yellow-600">1</span>
+              </div>
+              <div className="text-left sm:text-center">
+                <h4 className="text-base sm:text-xl font-bold text-gray-800 mb-1 sm:mb-2">Connect</h4>
+                <p className="text-xs sm:text-base text-gray-600">Reach out via WhatsApp or scan the QR code</p>
+              </div>
             </div>
-            <h4 className="text-xl font-bold text-gray-800 mb-2">Connect</h4>
-            <p className="text-gray-600">Reach out via WhatsApp or scan the QR code</p>
           </div>
 
-          <div className="text-center bg-white rounded-2xl p-6 shadow-lg border border-yellow-200">
-            <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-yellow-600">2</span>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-yellow-200 min-w-0">
+            <div className="flex items-start gap-4 sm:block sm:text-center">
+              <div className="w-11 h-11 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                <span className="text-base sm:text-2xl font-bold text-yellow-600">2</span>
+              </div>
+              <div className="text-left sm:text-center">
+                <h4 className="text-base sm:text-xl font-bold text-gray-800 mb-1 sm:mb-2">Interview</h4>
+                <p className="text-xs sm:text-base text-gray-600">Brief conversation about your interests and availability</p>
+              </div>
             </div>
-            <h4 className="text-xl font-bold text-gray-800 mb-2">Interview</h4>
-            <p className="text-gray-600">Brief conversation about your interests and availability</p>
           </div>
 
-          <div className="text-center bg-white rounded-2xl p-6 shadow-lg border border-yellow-200">
-            <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <span className="text-2xl font-bold text-yellow-600">3</span>
+          <div className="bg-white rounded-2xl p-4 sm:p-6 shadow-lg border border-yellow-200 min-w-0">
+            <div className="flex items-start gap-4 sm:block sm:text-center">
+              <div className="w-11 h-11 sm:w-16 sm:h-16 bg-yellow-100 rounded-full flex items-center justify-center">
+                <span className="text-base sm:text-2xl font-bold text-yellow-600">3</span>
+              </div>
+              <div className="text-left sm:text-center">
+                <h4 className="text-base sm:text-xl font-bold text-gray-800 mb-1 sm:mb-2">Welcome</h4>
+                <p className="text-xs sm:text-base text-gray-600">Join our team and start making a difference</p>
+              </div>
             </div>
-            <h4 className="text-xl font-bold text-gray-800 mb-2">Welcome</h4>
-            <p className="text-gray-600">Join our team and start making a difference</p>
           </div>
         </motion.div>
       </div>

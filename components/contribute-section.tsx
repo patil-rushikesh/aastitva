@@ -33,26 +33,26 @@ export default function ContributeSection() {
             initial={{ x: -100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-yellow-200"
+            className="bg-white rounded-2xl p-4 sm:p-8 shadow-2xl border border-yellow-200 min-w-0"
           >
-            <div className="text-center mb-6 sm:mb-8">
-              <QrCode className="w-12 sm:w-16 h-12 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Quick Donation</h3>
-              <p className="text-gray-600">Scan the QR code to donate instantly</p>
+            <div className="text-center mb-5 sm:mb-8">
+              <QrCode className="w-10 h-10 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
+              <h3 className="text-base sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">Quick Donation</h3>
+              <p className="text-sm sm:text-base text-gray-600">Scan the QR code to donate instantly</p>
             </div>
             <div className="flex justify-center mb-4 sm:mb-6">
               <div className="bg-gray-100 p-2 sm:p-4 rounded-2xl">
                 <img
                   src="/Qr.png"
                   alt="QR Code for donations"
-                  className="w-32 h-32 sm:w-48 sm:h-48"
+                  className="w-24 h-24 sm:w-44 sm:h-44"
                   loading="lazy"
                 />
               </div>
             </div>
             <div className="text-center">
               <p className="text-xs sm:text-sm text-gray-500 mb-2 sm:mb-4">Scan with any UPI app to donate securely</p>
-              <div className="flex justify-center space-x-2 sm:space-x-4">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-4">
                 <span className="bg-yellow-100 text-yellow-800 px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                   Google Pay
                 </span>
@@ -67,12 +67,12 @@ export default function ContributeSection() {
             initial={{ x: 100, opacity: 0 }}
             animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xl border border-yellow-200"
+            className="bg-white rounded-2xl p-4 sm:p-8 shadow-2xl border border-yellow-200 min-w-0"
           >
-            <div className="text-center mb-6 sm:mb-8">
-              <CreditCard className="w-12 sm:w-16 h-12 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-2">Bank Transfer</h3>
-              <p className="text-gray-600">Direct bank transfer for larger donations</p>
+            <div className="text-center mb-5 sm:mb-8">
+              <CreditCard className="w-10 h-10 sm:w-16 sm:h-16 text-yellow-500 mx-auto mb-2 sm:mb-4" />
+              <h3 className="text-base sm:text-2xl font-bold text-gray-800 mb-1 sm:mb-2">Bank Transfer</h3>
+              <p className="text-sm sm:text-base text-gray-600">Direct bank transfer for larger donations</p>
             </div>
             <div className="space-y-3 sm:space-y-4">
               {/* <div className="bg-gray-50 rounded-xl p-4">
@@ -83,23 +83,23 @@ export default function ContributeSection() {
               </div> */}
 
               <div className="bg-gray-50 rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mb-2">
                   <span className="font-semibold text-gray-700">Account Number:</span>
-                  <span className="text-gray-800 font-mono">1014169776</span>
+                  <span className="text-gray-800 font-mono break-all sm:break-normal">1014169776</span>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mb-2">
                   <span className="font-semibold text-gray-700">IFSC Code:</span>
-                  <span className="text-gray-800 font-mono">KKBK0001757</span>
+                  <span className="text-gray-800 font-mono break-all sm:break-normal">KKBK0001757</span>
                 </div>
               </div>
 
               <div className="bg-gray-50 rounded-xl p-4">
-                <div className="flex justify-between items-center mb-2">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-2 mb-2">
                   <span className="font-semibold text-gray-700">Bank Name:</span>
-                  <span className="text-gray-800"> Kotak Mahindra Bank</span>
+                  <span className="text-gray-800">Kotak Mahindra Bank</span>
                 </div>
               </div>
 
@@ -125,10 +125,10 @@ export default function ContributeSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mt-10 sm:mt-20 text-center"
         >
-          <div className="bg-white rounded-2xl p-5 sm:p-7 shadow-lg border border-yellow-200 max-w-2xl mx-auto ">
-            <Banknote className="w-10 sm:w-12 h-10 sm:h-12 text-yellow-500 mx-auto mb-2 sm:mb-4 " />
-            <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">Tax Benefits</h3>
-            <p className="text-gray-600 leading-relaxed text-xs sm:text-base">
+          <div className="bg-white rounded-2xl p-4 sm:p-7 shadow-lg border border-yellow-200 max-w-2xl mx-auto ">
+            <Banknote className="w-9 h-9 sm:w-12 sm:h-12 text-yellow-500 mx-auto mb-2 sm:mb-4 " />
+            <h3 className="text-base sm:text-xl font-bold text-gray-800 mb-2 sm:mb-4">Tax Benefits</h3>
+            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
               All donations to Aastitva Foundation are eligible for tax deduction under Section 80G of the Income Tax Act.
               You will receive a tax-exempt receipt for your contribution.
             </p>

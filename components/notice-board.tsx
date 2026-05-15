@@ -66,7 +66,7 @@ export default function NoticeBoard() {
 
   if (loading) {
     return (
-      <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md mx-auto border border-yellow-200">
+      <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 w-full max-w-md mx-auto border border-yellow-200">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded mb-4"></div>
           <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -79,7 +79,7 @@ export default function NoticeBoard() {
 
   if (!loading && notices.length === 0) {
     return (
-      <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md mx-auto border border-yellow-200">
+      <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-6 w-full max-w-md mx-auto border border-yellow-200">
         <div className="flex items-center mb-4">
           <Heart className="w-6 h-6 text-yellow-500 mr-2" />
           <h3 className="text-xl font-bold text-gray-800">Notice Board</h3>
