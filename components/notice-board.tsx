@@ -77,6 +77,20 @@ export default function NoticeBoard() {
     )
   }
 
+  if (!loading && notices.length === 0) {
+    return (
+      <div className="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-md mx-auto border border-yellow-200">
+        <div className="flex items-center mb-4">
+          <Heart className="w-6 h-6 text-yellow-500 mr-2" />
+          <h3 className="text-xl font-bold text-gray-800">Notice Board</h3>
+        </div>
+        <p className="text-sm text-gray-600 leading-relaxed">
+          No updates yet. New announcements and events will appear here soon.
+        </p>
+      </div>
+    )
+  }
+
   return (
     <motion.div
       initial={{ scale: 0.9, opacity: 0 }}
@@ -98,6 +112,7 @@ export default function NoticeBoard() {
             exit={{ x: -50, opacity: 0 }}
             transition={{ duration: 0.3 }}
             className="space-y-2 sm:space-y-3"
+            aria-live="polite"
           >
             <div className="flex items-center space-x-2">
               <div className={`p-2 rounded-full ${getTypeColor(notices[currentIndex].type)} text-white`}>

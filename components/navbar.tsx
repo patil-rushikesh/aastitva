@@ -66,8 +66,8 @@ export default function Navbar() {
           scrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-yellow-200"
             : "bg-white/90 backdrop-blur-sm"
-        }`}
-        style={{ marginTop: scrolled ? "0" : "40px" }}
+        } ${scrolled ? "md:mt-0" : "md:mt-10"}`}
+        aria-label="Primary"
       >
         <div className="max-w-6xl mx-auto px-2 sm:px-4">
           <div className="flex items-center justify-between h-16">
@@ -81,7 +81,7 @@ export default function Navbar() {
                 <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center shadow-lg">
                   <img
                     src="/aastitvaLogo.png"
-                    alt="Astitva Logo"
+                    alt="Aastitva Foundation logo"
                     className="w-10 h-10 sm:w-14 sm:h-14 object-contain"
                   />
                 </div>
@@ -125,6 +125,8 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors duration-200"
               aria-label="Toggle menu"
+              aria-expanded={isOpen}
+              aria-controls="mobile-menu"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -135,6 +137,7 @@ export default function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              id="mobile-menu"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -192,7 +195,7 @@ export default function Navbar() {
       </motion.nav>
 
       {/* Spacer to prevent content from hiding behind fixed navbar */}
-      <div className={`${scrolled ? "h-16" : "h-24"} transition-all duration-300`}></div>
+      <div className="h-16"></div>
     </>
   )
 }

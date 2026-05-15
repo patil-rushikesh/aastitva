@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin, Heart } from "lucide-react"
+import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Heart } from "lucide-react"
 
 export default function FooterSection() {
   const [ref, inView] = useInView({
@@ -11,9 +11,9 @@ export default function FooterSection() {
   })
 
   const socialLinks = [
-    { icon: Facebook, href: "https://facebook.com/socialaastitva", label: "Facebook" },
-    { icon: Twitter, href: "https://twitter.com/socialaastitva", label: "Twitter" },
-    { icon: Instagram, href: "https://instagram.com/socialaastitva", label: "Instagram" },
+    { icon: Facebook, href: "https://www.facebook.com/socialaastitva", label: "Facebook" },
+    { icon: Twitter, href: "https://x.com/socialaastitva", label: "X" },
+    { icon: Instagram, href: "https://www.instagram.com/socialaastitva", label: "Instagram" },
   ]
 
   return (
@@ -48,7 +48,7 @@ export default function FooterSection() {
                   <Phone className="w-6 h-6 text-yellow-400 flex-shrink-0" />
                   <div>
                     <p className="font-semibold mb-1">Phone</p>
-                    <a href="tel:+1234567890" className="text-gray-300 hover:text-yellow-400 transition-colors">
+                    <a href="tel:+917720001488" className="text-gray-300 hover:text-yellow-400 transition-colors">
                       +91 77200 01488
                     </a>
                   </div>
@@ -122,7 +122,9 @@ export default function FooterSection() {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-3 sm:space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2">
               <Heart className="w-5 h-5 text-yellow-400" />
-              <p className="text-gray-300 text-xs sm:text-sm">© 2025 Aastitva Foundation. All rights reserved.</p>
+              <p className="text-gray-300 text-xs sm:text-sm">
+                © {new Date().getFullYear()} Aastitva Foundation. All rights reserved.
+              </p>
             </div>
 
             <div className="flex items-center space-x-4 sm:space-x-6 text-xs sm:text-sm text-gray-400">

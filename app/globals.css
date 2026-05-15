@@ -55,6 +55,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    background-image: radial-gradient(circle at top left, rgba(250, 204, 21, 0.08), transparent 45%),
+      radial-gradient(circle at 20% 20%, rgba(234, 179, 8, 0.12), transparent 35%),
+      linear-gradient(180deg, rgba(255, 249, 235, 0.8), rgba(255, 255, 255, 0));
   }
 }
 
@@ -102,7 +106,12 @@ body,
 }
 
 /* Smooth animations */
-* {
+button,
+a,
+input,
+textarea,
+select,
+[role="button"] {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow,
     transform, filter, backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -133,6 +142,17 @@ body,
   }
 }
 
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @keyframes pulse {
   0%,
   100% {
@@ -149,6 +169,18 @@ body,
 
 .animate-pulse {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.page-fade-in {
+  animation: pageFadeIn 0.7s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-fade-in,
+  .animate-fade-in-up,
+  .animate-pulse {
+    animation: none !important;
+  }
 }
 
 /* Image hover effects */
@@ -187,6 +219,49 @@ a:focus-visible {
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 96px;
+}
+
+.font-display,
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+.hero-surface {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-surface::before,
+.hero-surface::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(0px);
+  opacity: 0.7;
+  z-index: 0;
+}
+
+.hero-surface::before {
+  width: 320px;
+  height: 320px;
+  top: -120px;
+  right: -100px;
+  background: radial-gradient(circle, rgba(234, 179, 8, 0.35), rgba(234, 179, 8, 0));
+}
+
+.hero-surface::after {
+  width: 260px;
+  height: 260px;
+  bottom: -120px;
+  left: -80px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.18), rgba(59, 130, 246, 0));
 }
 
 /* Ensure proper spacing for fixed navbar */

@@ -1,11 +1,14 @@
 import { NextResponse } from "next/server"
 import { MongoClient } from "mongodb"
 
-const MONGO_URI = process.env.MONGO_URI
-const DB_NAME = "your-db-name"
-
 export async function GET() {
-    const client = new MongoClient(process.env.MONGODB_URI!)
+  const mongoUri = process.env.MONGODB_URI
+  if (!mongoUri) {
+    return NextResponse.json([])
+  }
+
+  const client = new MongoClient(mongoUri)
+
   try {
     await client.connect()
     const db = client.db("aastitvaNotices")

@@ -11,7 +11,6 @@ export default function MemberSection() {
   })
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hi, I'm interested in becoming a member of your NGO!")
     const whatsappUrl = `https://wa.me/message/XPEVRULGH7JRP1?src=qr`
     window.open(whatsappUrl, "_blank")
   }
@@ -29,8 +28,8 @@ export default function MemberSection() {
             Become a <span className="text-yellow-500">Member</span>
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Join our community of changemakers and be part of the solution. Together, we can create a lasting impact on
-            society.
+            Join our community of changemakers and be part of the solution. Together, we can create lasting impact in
+            every neighborhood we serve.
           </p>
         </motion.div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
@@ -103,7 +102,7 @@ export default function MemberSection() {
               <p className="text-sm text-gray-500 mb-4">Scan with your phone camera or WhatsApp</p>
               <div className="bg-green-50 rounded-xl p-4 border border-green-200">
                 <p className="text-green-800 text-sm">
-                  <strong>Message on above Whatsapp Account:</strong>
+                  <strong>Send this message on WhatsApp:</strong>
                   <br />
                   "Hi, I'm interested in becoming a member of your NGO!"
                 </p>

@@ -13,6 +13,32 @@ interface GalleryImage {
 }
 
 export default function GallerySection() {
+  const fallbackImages: GalleryImage[] = [
+    {
+      id: 1,
+      src: "/placeholder.jpg",
+      alt: "Community health camp outreach",
+      category: "health",
+    },
+    {
+      id: 2,
+      src: "/placeholder.jpg",
+      alt: "Education support session",
+      category: "education",
+    },
+    {
+      id: 3,
+      src: "/placeholder.jpg",
+      alt: "Volunteer-led neighborhood drive",
+      category: "community",
+    },
+    {
+      id: 4,
+      src: "/placeholder.jpg",
+      alt: "Youth empowerment workshop",
+      category: "youth",
+    },
+  ]
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -29,9 +55,9 @@ export default function GallerySection() {
       try {
         const res = await fetch("/api/images")
         const data = await res.json()
-        setGalleryImages(data)
+        setGalleryImages(Array.isArray(data) && data.length > 0 ? data : fallbackImages)
       } catch (err) {
-        setGalleryImages([])
+        setGalleryImages(fallbackImages)
       } finally {
         setLoading(false)
       }
@@ -131,6 +157,7 @@ export default function GallerySection() {
                 setFilter(category)
                 setVisibleImages(12)
               }}
+              aria-pressed={filter === category}
               className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                 filter === category
                   ? "bg-yellow-500 text-white shadow-lg"
@@ -145,6 +172,10 @@ export default function GallerySection() {
         {/* Gallery Grid */}
         {loading ? (
           <div className="text-center py-12 text-gray-500">Loading images...</div>
+        ) : filteredImages.length === 0 ? (
+          <div className="text-center py-12 text-gray-500">
+            New gallery moments are being curated. Please check back soon.
+          </div>
         ) : (
           <motion.div
             initial={{ y: 50, opacity: 0 }}

@@ -1,19 +1,29 @@
 import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import type { Metadata, Viewport } from "next"
+import { Cormorant_Garamond, Manrope } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/navbar"
+import SeoSchema from "@/components/seo-schema"
+import Preloader from "@/components/preloader"
 
-const inter = Inter({ subsets: ["latin"] })
+const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" })
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-display",
+  display: "swap",
+})
+
+const siteUrl = "https://www.aastitva.org"
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://hopefoundation.org"),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: "Hope Foundation NGO - Transforming Lives, Building Communities",
-    template: "%s | Hope Foundation NGO",
+    default: "Aastitva Foundation - Empowering Identity, Embracing Existence",
+    template: "%s | Aastitva Foundation",
   },
   description:
-    "Join Hope Foundation NGO in our mission to create positive change through education, healthcare, and community development. Donate, volunteer, or become a member today.",
+    "Aastitva Foundation is a Pune-based nonprofit advancing education, health, and community development. Donate, volunteer, or become a member to create lasting impact.",
   keywords: [
     "NGO",
     "charity",
@@ -23,16 +33,19 @@ export const metadata: Metadata = {
     "education",
     "healthcare",
     "social work",
-    "Hope Foundation",
+    "Aastitva Foundation",
     "non-profit",
   ],
-  authors: [{ name: "Hope Foundation NGO", url: "https://hopefoundation.org" }],
-  creator: "Hope Foundation NGO",
-  publisher: "Hope Foundation NGO",
+  authors: [{ name: "Aastitva Foundation", url: siteUrl }],
+  creator: "Aastitva Foundation",
+  publisher: "Aastitva Foundation",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
+  },
+  alternates: {
+    canonical: siteUrl,
   },
   robots: {
     index: true,
@@ -45,10 +58,46 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  verification: {
-    google: "your-google-verification-code",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "Aastitva Foundation",
+    title: "Aastitva Foundation - Empowering Identity, Embracing Existence",
+    description:
+      "Aastitva Foundation is a Pune-based nonprofit advancing education, health, and community development.",
+    images: [
+      {
+        url: "/main.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Aastitva Foundation community initiatives",
+      },
+    ],
   },
-    generator: 'v0.dev'
+  twitter: {
+    card: "summary_large_image",
+    title: "Aastitva Foundation - Empowering Identity, Embracing Existence",
+    description:
+      "Aastitva Foundation is a Pune-based nonprofit advancing education, health, and community development.",
+    images: ["/main.jpg"],
+  },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/aastitvaLogo.png",
+    apple: "/aastitvaLogo.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "Aastitva Foundation",
+  },
+}
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#EAB308",
 }
 
 export default function RootLayout({
@@ -58,19 +107,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <link rel="canonical" href="https://hopefoundation.org" />
-        <meta name="theme-color" content="#EAB308" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Hope Foundation" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-      </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
+        <Preloader />
         <Navbar />
-        {children}
+        <SeoSchema />
+        <div className="page-fade-in">{children}</div>
       </body>
     </html>
   )

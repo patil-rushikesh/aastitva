@@ -30,8 +30,8 @@ export default function AboutSection() {
             About <span className="text-yellow-500">Aastitva Foundation</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Founded with a vision to create lasting change, Aastitva Foundation has been at the forefront of community
-            development, education, and healthcare initiatives.
+            Founded with a vision to create lasting change, Aastitva Foundation supports community development,
+            education, and healthcare initiatives across Pune and beyond.
           </p>
         </motion.div>
 
@@ -48,7 +48,9 @@ export default function AboutSection() {
                   <h3 className="text-2xl font-bold text-gray-800">Our Mission</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                 Aastitva is committed to supporting individuals on their journey of self-discovery and social upliftment by fostering awareness, encouraging community involvement, and promoting values that build a compassionate and progressive society."
+                  Aastitva is committed to supporting individuals on their journey of self-discovery and social
+                  upliftment by fostering awareness, encouraging community involvement, and promoting values that build
+                  a compassionate and progressive society.
                 </p>
               </div>
 
@@ -58,7 +60,8 @@ export default function AboutSection() {
                   <h3 className="text-2xl font-bold text-gray-800">Our Vision</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  To nurture a society where every individual finds their true identity and contributes to a socially conscious, inclusive, and empowered tomorrow
+                  To nurture a society where every individual finds their true identity and contributes to a socially
+                  conscious, inclusive, and empowered tomorrow.
                 </p>
               </div>
             </div>
@@ -73,15 +76,15 @@ export default function AboutSection() {
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src="/main.png"
-                alt="Hope Foundation team members working together in the community"
+                alt="Aastitva Foundation volunteers supporting the community"
                 className="w-full h-[500px] object-cover transition-transform duration-700 hover:scale-105"
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-<div className="absolute inset-0 flex flex-col items-center justify-end pb-12 text-white text-center">
-  <h4 className="text-4xl font-bold mb-2">Our Dedicated Team</h4>
-  <p className="text-white/90">Working together for a better tomorrow</p>
-</div>
+              <div className="absolute inset-0 flex flex-col items-center justify-end pb-12 text-white text-center">
+                <h4 className="text-4xl font-bold mb-2">Our Dedicated Team</h4>
+                <p className="text-white/90">Working together for a better tomorrow</p>
+              </div>
 
             </div>
           </motion.div>

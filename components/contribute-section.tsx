@@ -24,7 +24,7 @@ export default function ContributeSection() {
           </h2>
           <p className="text-base sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Your contribution helps us continue our mission of transforming lives and building stronger communities.
-            Every donation makes a difference.
+            Every donation funds tangible change on the ground.
           </p>
         </motion.div>
 
@@ -111,7 +111,7 @@ export default function ContributeSection() {
                 {/* <Heart className="w-5 h-5 text-yellow-600 mr-2" /> */}
                 <p className="text-sm text-yellow-800">
                   <strong>Note:</strong> Please send us the transaction details at{" "}
-                  <a href="mailto:donations@hopefoundation.org" className="underline">
+                  <a href="mailto:contact@aastitva.org" className="underline">
                     contact@aastitva.org
                   </a>
                 </p>
