@@ -1,10 +1,13 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
 import { Cormorant_Garamond, Manrope } from "next/font/google"
+import Link from "next/link"
+import { Droplet } from "lucide-react"
 import "./globals.css"
 import Navbar from "@/components/navbar"
 import SeoSchema from "@/components/seo-schema"
 import Preloader from "@/components/preloader"
+import FloatingDonationButton from "@/components/floating-donation-button"
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" })
 const cormorant = Cormorant_Garamond({
@@ -112,6 +115,7 @@ export default function RootLayout({
         <Navbar />
         <SeoSchema />
         <div className="page-fade-in">{children}</div>
+        <FloatingDonationButton />
       </body>
     </html>
   )

@@ -21,7 +21,6 @@ export default function Navbar() {
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Contribute", href: "#contribute" },
-    { name: "Membership", href: "#membership" },
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
   ]
