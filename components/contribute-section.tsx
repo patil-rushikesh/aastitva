@@ -41,13 +41,15 @@ export default function ContributeSection() {
               <p className="text-sm sm:text-base text-gray-600">Scan the QR code to donate instantly</p>
             </div>
             <div className="flex justify-center mb-4 sm:mb-6">
-              <div className="bg-gray-100 p-2 sm:p-4 rounded-2xl">
-                <img
-                  src="/Qr.png"
-                  alt="QR Code for donations"
-                  className="w-24 h-24 sm:w-44 sm:h-44"
-                  loading="lazy"
-                />
+              <div className="w-full flex justify-center">
+                <div className="bg-gray-100 p-4 rounded-2xl w-90 sm:w-64">
+                  <img
+                    src="/Qr.png"
+                    alt="QR Code for donations"
+                    className="w-full h-auto aspect-square object-contain"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
             <div className="text-center">
@@ -103,7 +105,7 @@ export default function ContributeSection() {
                 </div>
               </div>
 
-              
+
             </div>
 
             <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-yellow-50 rounded-xl border border-yellow-200">
