@@ -16,10 +16,8 @@ export async function POST(request: Request) {
   try {
     // 1. Parse the incoming request body
     const body = await request.json();
-    const { fullName, bloodGroup, whatsapp, location } = body;
-
-    // 2. Basic validation to ensure all fields are present
-    if (!fullName || !bloodGroup || !whatsapp || !location) {
+    const { fullName, dob, whatsapp, bloodGroup, donationDate, location } = body;
+    if (!fullName || !dob || !whatsapp || !bloodGroup || !donationDate || !location) {
       return NextResponse.json(
         { error: "Missing required fields." },
         { status: 400 }
@@ -34,16 +32,17 @@ export async function POST(request: Request) {
     const db = client.db("aastitvaCampaigns"); 
     const collection = db.collection("bloodDonationRegistrations");
 
-    // 5. Insert the data along with a timestamp
+    // 4. Insert the full payload
     const result = await collection.insertOne({
       fullName,
-      bloodGroup,
+      dob,              // New field
       whatsapp,
+      bloodGroup,
+      donationDate,     // New field
       location,
       submittedAt: new Date(),
     });
 
-    // 6. Return success response
     return NextResponse.json(
       { success: true, message: "Registration saved successfully.", id: result.insertedId },
       { status: 201 }
@@ -56,7 +55,6 @@ export async function POST(request: Request) {
       { status: 500 }
     );
   } finally {
-    // 7. Ensure the connection is always closed
     await client.close();
   }
 }
