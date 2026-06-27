@@ -8,6 +8,7 @@ import Navbar from "@/components/navbar"
 import SeoSchema from "@/components/seo-schema"
 import Preloader from "@/components/preloader"
 import FloatingDonationButton from "@/components/floating-donation-button"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans", display: "swap" })
 const cormorant = Cormorant_Garamond({
@@ -109,13 +110,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <body className={`${manrope.variable} ${cormorant.variable} antialiased`}>
-        <Preloader />
-        <Navbar />
-        <SeoSchema />
-        <div className="page-fade-in">{children}</div>
-        <FloatingDonationButton />
+        <ThemeProvider attribute="class" forcedTheme="light">
+          <Preloader />
+          <Navbar />
+          <SeoSchema />
+          <div className="page-fade-in">{children}</div>
+          <FloatingDonationButton />
+        </ThemeProvider>
       </body>
     </html>
   )

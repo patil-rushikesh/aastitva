@@ -61,11 +61,10 @@ export default function Navbar() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${scrolled
             ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-yellow-200"
             : "bg-white/90 backdrop-blur-sm"
-        } ${scrolled ? "md:mt-0" : "md:mt-10"}`}
+          } ${scrolled ? "md:mt-0" : "md:mt-10"}`}
         aria-label="Primary"
       >
         <div className="max-w-6xl mx-auto px-2 sm:px-4">
