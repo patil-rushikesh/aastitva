@@ -13,7 +13,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 // Schedule Data
 const CAMP_SCHEDULE = [
     { id: "Balaji-Law-College", date: "2026-07-25", label: "Balaji Law College (BLC), Pune" },
-    { id: "Mayur-Samruddi", date: "2026-07-26", label: "Mayur Samruddi Housing Society, Dattawadi, Akurdi" },
+    { id: "Mayur-Samruddi", date: "2026-07-26", label: "Mayur Samruddi Housing Society, Dattawadi, Akurdi, Pune" },
+    { id: "K-Ville" , date: "2026-07-26", label: "K-Ville Society, Kiwale, Pune" },
 ];
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Don't Know"];
