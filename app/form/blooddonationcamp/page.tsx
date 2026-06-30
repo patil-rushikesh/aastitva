@@ -15,6 +15,7 @@ const CAMP_SCHEDULE = [
     { id: "Balaji-Law-College", date: "2026-07-25", label: "Balaji Law College, Tathawade, Pune" },
     { id: "Mayur-Samruddi", date: "2026-07-26", label: "Mayur Samruddi Housing Society, Dattawadi, Akurdi, Pune" },
     { id: "K-Ville" , date: "2026-07-26", label: "K-Ville Society, Kiwale, Pune" },
+    { id: "Swarajya-yuva-manch", date: "2026-07-26", label: "Swarajya Yuva Manch, Shriram chowk, Ravet, Pune" },
 ];
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Don't Know"];
