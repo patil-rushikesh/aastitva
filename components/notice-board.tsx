@@ -127,17 +127,36 @@ export default function NoticeBoard() {
           </motion.div>
         )}
       </AnimatePresence>
-      {notices.length > 1 && (
+      {notices.length > 1 && notices.length <= 8 && (
         <div className="flex justify-center mt-3 sm:mt-4 space-x-2">
           {notices.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? "bg-yellow-500" : "bg-gray-300"
-              }`}
+              aria-label={`View notice ${index + 1}`}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentIndex ? "bg-yellow-500" : "bg-gray-300"
+                }`}
             />
           ))}
+        </div>
+      )}
+      {notices.length > 8 && (
+        <div className="flex justify-center mt-3 sm:mt-4 space-x-4 items-center">
+          <button
+            onClick={() => setCurrentIndex((prev) => (prev - 1 + notices.length) % notices.length)}
+            className="text-gray-400 hover:text-yellow-500 text-xs transition-colors"
+          >
+            Prev
+          </button>
+          <span className="text-xs text-gray-500 font-medium">
+            {currentIndex + 1} / {notices.length}
+          </span>
+          <button
+            onClick={() => setCurrentIndex((prev) => (prev + 1) % notices.length)}
+            className="text-gray-400 hover:text-yellow-500 text-xs transition-colors"
+          >
+            Next
+          </button>
         </div>
       )}
     </motion.div>
