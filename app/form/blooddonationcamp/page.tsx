@@ -18,7 +18,8 @@ const CAMP_SCHEDULE = [
     { id: "Matru-Vidyalaya", date: "2026-07-25", label: "Matru Vidyalaya, Walhekarwadi, Pune" },
     { id: "Jai-Hind-Mitra-Mandal-Trust", date: "2026-07-26", label: "Jai Hind Mitra Mandal Trust, Pradhikaran, Pune" },
     { id: "Shri-Sainath-Tarun-Mandal", date: "2026-07-26", label: "Shri Sainath Tarun Mandal, Mohannagar, Pune" },
-    { id: "Kalpataru-Exquisite-Housing-Society", date: "2026-07-26", label: "Kalpataru Exquisite Housing Society, Kaspate Wasti, Wakad, Pune" }
+    { id: "Kalpataru-Exquisite-Housing-Society", date: "2026-07-26", label: "Kalpataru Exquisite Housing Society, Kaspate Wasti, Wakad, Pune" },
+    { id: "K-town", date: "2026-07-26", label: "K-Town, Near Mukai Chowk, Kiwale, Pune" }
 ];
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Don't Know"];
