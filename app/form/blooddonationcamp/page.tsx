@@ -61,6 +61,11 @@ const CAMP_SCHEDULE = [
     id: "Saidham-Society",
     date: "2026-07-26",
     label: "Saidham Society, Akurdi"
+  },
+  {
+    id: "Nano-Homes",
+    date: "2026-07-26",
+    label: "Nano Homes, Ravet"
   }
 ];
 
