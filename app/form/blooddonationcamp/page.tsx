@@ -12,14 +12,56 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 // Schedule Data
 const CAMP_SCHEDULE = [
-    { id: "Balaji-Law-College", date: "2026-07-25", label: "Balaji Law College, Tathawade, Pune" },
-    { id: "K-Ville", date: "2026-07-26", label: "K-Ville Society, Kiwale, Pune" },
-    { id: "Swarajya-yuva-manch", date: "2026-07-26", label: "Swarajya Yuva Manch, Shriram chowk, Ravet, Pune" },
-    { id: "Matru-Vidyalaya", date: "2026-07-25", label: "Matru Vidyalaya, Walhekarwadi, Pune" },
-    { id: "Jai-Hind-Mitra-Mandal-Trust", date: "2026-07-26", label: "Jai Hind Mitra Mandal Trust, Pradhikaran, Pune" },
-    { id: "Shri-Sainath-Tarun-Mandal", date: "2026-07-26", label: "Shri Sainath Tarun Mandal, Mohannagar, Pune" },
-    { id: "Kalpataru-Exquisite-Housing-Society", date: "2026-07-26", label: "Kalpataru Exquisite Housing Society, Kaspate Wasti, Wakad, Pune" },
-    { id: "K-town", date: "2026-07-26", label: "K-Town, Near Mukai Chowk, Kiwale, Pune" }
+  {
+    id: "Balaji-Law-College",
+    date: "2026-07-25",
+    label: "Balaji Law College, Tathawade"
+  },
+  {
+    id: "Matru-Vidyalaya",
+    date: "2026-07-25",
+    label: "Matru Vidyalaya, Walhekarwadi"
+  },
+  {
+    id: "Silver-Gardenia",
+    date: "2026-07-25",
+    label: "Silver Gardenia, Ravet"
+  },
+  {
+    id: "K-Ville",
+    date: "2026-07-26",
+    label: "K-Ville, Kiwale"
+  },
+  {
+    id: "K-Town",
+    date: "2026-07-26",
+    label: "K-Town, Kiwale"
+  },
+  {
+    id: "Swarajya-Yuva-Manch",
+    date: "2026-07-26",
+    label: "Swarajya Yuva Manch, Shriram Chowk, Ravet"
+  },
+  {
+    id: "Jai-Hind-Mitra-Mandal-Trust",
+    date: "2026-07-26",
+    label: "Jai Hind Mitra Mandal Trust, Sector 28, Pradhikaran"
+  },
+  {
+    id: "Shri-Sainath-Tarun-Mandal",
+    date: "2026-07-26",
+    label: "Shri Sainath Tarun Mandal, Mohannagar"
+  },
+  {
+    id: "Kalpataru-Exquisite-Housing-Society",
+    date: "2026-07-26",
+    label: "Kalpataru Exquisite Housing Society, Kaspate Wasti, Wakad"
+  },
+  {
+    id: "Saidham-Society",
+    date: "2026-07-26",
+    label: "Saidham Society, Akurdi"
+  }
 ];
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Don't Know"];
