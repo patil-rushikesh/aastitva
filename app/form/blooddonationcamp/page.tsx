@@ -142,13 +142,13 @@ export default function BloodDonationForm() {
     };
 
     return (
-        <main className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 relative bg-slate-50 dark:bg-slate-950">
+        <main className="min-h-screen py-8 sm:py-12 px-3 sm:px-6 lg:px-8 relative bg-slate-50 dark:bg-slate-950">
             <div className="max-w-3xl mx-auto space-y-8 relative z-10">
 
                 {/* Back to Home Navigation */}
                 <div className="flex justify-start">
                     <Link href="/">
-                        <Button variant="ghost" className="gap-2 text-muted-foreground hover:text-foreground rounded-xl transition-all -ml-4">
+                        <Button variant="ghost" className="gap-2 text-sm sm:text-base text-muted-foreground hover:text-foreground rounded-xl transition-all -ml-2 sm:-ml-4 px-2 sm:px-3">
                             <ArrowLeft className="w-4 h-4" />
                             <span>Back to Home / मुख्य पृष्ठ</span>
                         </Button>
@@ -199,14 +199,14 @@ export default function BloodDonationForm() {
                     </div>
 
                     <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left border-y border-border py-8">
-                        <div className="flex items-center space-x-4 bg-background/80 p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+                        <div className="flex items-start sm:items-center gap-4 bg-background/80 p-4 sm:p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
                             <Calendar className="w-7 h-7 text-primary flex-shrink-0" />
                             <div>
                                 <p className="font-semibold text-sm">25th & 26th July 2026</p>
                                 <p className="text-xs text-muted-foreground mt-1">२५ आणि २६ जुलै २०२६</p>
                             </div>
                         </div>
-                        <div className="flex items-center space-x-4 bg-background/80 p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
+                        <div className="flex items-start sm:items-center gap-4 bg-background/80 p-4 sm:p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
                             <Clock className="w-7 h-7 text-primary flex-shrink-0" />
                             <div>
                                 <p className="font-semibold text-sm">9:00 AM to 2:00 PM</p>
@@ -302,16 +302,16 @@ export default function BloodDonationForm() {
                                 </CardTitle>
                             </CardHeader>
                             <CardContent className="p-6">
-                                <div className="grid grid-cols-3 sm:grid-cols-5 gap-3">
+                                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                                     {BLOOD_GROUPS.map((bg) => (
                                         <button
                                             key={bg}
                                             type="button"
                                             onClick={() => setBloodGroup(bg)}
-                                            className={`py-3 px-2 rounded-xl text-sm font-bold border-2 transition-all duration-200 ${bloodGroup === bg
+                                            className={`py-3 px-2 rounded-xl text-xs sm:text-sm font-bold border-2 transition-all duration-200 ${bloodGroup === bg
                                                 ? 'bg-red-500 border-red-500 text-white shadow-md scale-105'
                                                 : 'bg-white dark:bg-slate-900 border-border text-foreground hover:border-red-300 hover:bg-red-50 dark:hover:bg-red-950/30'
-                                                } ${bg === "Don't Know" ? 'col-span-3 sm:col-span-2' : ''}`}
+                                                } ${bg === "Don't Know" ? 'col-span-2 sm:col-span-1 lg:col-span-2' : ''}`}
                                         >
                                             {bg === "Don't Know" ? "Don't Know" : bg}
                                         </button>
@@ -332,12 +332,12 @@ export default function BloodDonationForm() {
                                 {/* Date Selection Cards */}
                                 <div className="space-y-3">
                                     <Label className="text-sm font-semibold text-muted-foreground">Select a Date</Label>
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
 
                                         <button
                                             type="button"
                                             onClick={() => { setDonationDate("2026-07-25"); setLocation(""); }}
-                                            className={`flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all duration-200 ${donationDate === "2026-07-25" ? 'bg-primary/10 border-primary shadow-sm' : 'bg-white dark:bg-slate-900 border-border hover:border-primary/40'
+                                            className={`flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all duration-200 w-full ${donationDate === "2026-07-25" ? 'bg-primary/10 border-primary shadow-sm' : 'bg-white dark:bg-slate-900 border-border hover:border-primary/40'
                                                 }`}
                                         >
                                             <div className={`p-3 rounded-full ${donationDate === "2026-07-25" ? 'bg-primary text-primary-foreground' : 'bg-slate-100 dark:bg-slate-800 text-muted-foreground'}`}>
@@ -351,7 +351,7 @@ export default function BloodDonationForm() {
                                         <button
                                             type="button"
                                             onClick={() => { setDonationDate("2026-07-26"); setLocation(""); }}
-                                            className={`flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all duration-200 ${donationDate === "2026-07-26" ? 'bg-primary/10 border-primary shadow-sm' : 'bg-white dark:bg-slate-900 border-border hover:border-primary/40'
+                                            className={`flex items-center gap-4 p-4 rounded-2xl border-2 text-left transition-all duration-200 w-full ${donationDate === "2026-07-26" ? 'bg-primary/10 border-primary shadow-sm' : 'bg-white dark:bg-slate-900 border-border hover:border-primary/40'
                                                 }`}
                                         >
                                             <div className={`p-3 rounded-full ${donationDate === "2026-07-26" ? 'bg-primary text-primary-foreground' : 'bg-slate-100 dark:bg-slate-800 text-muted-foreground'}`}>
@@ -369,12 +369,12 @@ export default function BloodDonationForm() {
                                 <div className="space-y-3">
                                     <Label className="text-sm font-semibold text-muted-foreground">Select a Venue</Label>
                                     <Select value={location} onValueChange={setLocation} disabled={!donationDate}>
-                                        <SelectTrigger className={`py-6 rounded-xl text-base ${!donationDate ? 'bg-slate-100 dark:bg-slate-800 opacity-60' : 'bg-white dark:bg-slate-900 focus:ring-primary border-2 border-primary/20 hover:border-primary/50'}`}>
-                                            <SelectValue placeholder={donationDate ? "Choose location..." : "Please select a date first"} />
+                                        <SelectTrigger className={`w-full py-6 rounded-xl text-sm sm:text-base ${!donationDate ? 'bg-slate-100 dark:bg-slate-800 opacity-60' : 'bg-white dark:bg-slate-900 focus:ring-primary border-2 border-primary/20 hover:border-primary/50'}`}>
+                                            <SelectValue className="truncate" placeholder={donationDate ? "Choose location..." : "Please select a date first"} />
                                         </SelectTrigger>
-                                        <SelectContent>
+                                        <SelectContent className="max-h-200 sm:max-h-100">
                                             {filteredVenues.map((v) => (
-                                                <SelectItem key={v.id} value={v.id} className="py-3 cursor-pointer">
+                                                <SelectItem key={v.id} value={v.id} className="py-3 cursor-pointer whitespace-normal leading-snug">
                                                     {v.label}
                                                 </SelectItem>
                                             ))}
