@@ -70,6 +70,11 @@ const CAMP_SCHEDULE = [
 
 const BLOOD_GROUPS = ["A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "Don't Know"];
 
+// Extract unique venue names from CAMP_SCHEDULE
+const COLLABORATING_VENUES_ARRAY = Array.from(
+	new Set(CAMP_SCHEDULE.map(camp => camp.label.split(',')[0]))
+);
+
 export default function DonationForm() {
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
@@ -182,10 +187,22 @@ export default function DonationForm() {
 							<strong className="text-foreground">Organized by / आयोजक:</strong> Aastitva Foundation (आस्तित्व फाउंडेशन)
 						</p>
 						<p className="text-sm">
-							In collaboration with: Multiple societies and institutions <br />
-							सहयोगी संस्था: विविध सोसायट्या आणि संस्था
-						</p>
-					</div>
+						In collaboration with / सहयोगी संस्था: <br />
+						<span className="text-xs leading-relaxed block mt-2 font-bold px-3 py-2 bg-amber-100 dark:bg-amber-900/40 rounded-lg text-amber-900 dark:text-amber-100">
+							{COLLABORATING_VENUES_ARRAY.map((venue, index) => (
+								<span key={index}>
+									{venue}
+									{index < COLLABORATING_VENUES_ARRAY.length - 1 && (
+										<>
+											<span className="mx-1">•</span>
+											<br className="sm:hidden" />
+										</>
+									)}
+								</span>
+							))}
+						</span>
+					</p>
+				</div>
 
 					<div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left border-y border-border py-8">
 						<div className="flex items-start sm:items-center gap-4 bg-background/80 p-4 sm:p-5 rounded-2xl border border-border hover:border-primary/50 transition-colors">
