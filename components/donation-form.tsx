@@ -47,9 +47,9 @@ const CAMP_SCHEDULE = [
 	label: "Jai Hind Mitra Mandal Trust, Sector 28, Pradhikaran"
   },
   {
-	id: "Shri-Sainath-Tarun-Mandal",
+	id: "Vignaharta-Mitra-Mandal",
 	date: "2026-07-26",
-	label: "Shri Sainath Tarun Mandal, Mohannagar"
+	label: "Vignaharta Mitra Mandal, Ramnagar, Akurdi"
   },
   {
 	id: "Kalpataru-Exquisite-Housing-Society",
