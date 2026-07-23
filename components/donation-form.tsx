@@ -42,9 +42,9 @@ const CAMP_SCHEDULE = [
 	label: "Swarajya Yuva Manch, Shriram Chowk, Ravet"
   },
   {
-	id: "Jai-Hind-Mitra-Mandal-Trust",
+	id: "Prayatn-Social-Foundation",
 	date: "2026-07-26",
-	label: "Jai Hind Mitra Mandal Trust, Sector 28, Pradhikaran"
+	label: "Prayatna Social Foundation, Sant Tukaram Garden, Pradhikaran, Nigdi"
   },
   {
 	id: "Vignaharta-Mitra-Mandal",
